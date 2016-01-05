@@ -55,7 +55,7 @@ figcaption {
 /* ID selector (apply to one unique elem per page) */
 
 #logo { /* select elem with id="logo" */
-  background: aqua;
+  
 
 }
 
@@ -85,7 +85,91 @@ figcaption {
   color:red;
 }
 
+/* MEDIA */
+
+img, video, audio {
+  max-width: 100%;
+}
+
+/* LAYOUT */
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.col-1 {
+  float: left;
+  width: 32%;
+}
+
+.col-2 {
+  float: left;
+  width: 66%;
+}
+
+.col-3 {
+  /* because display is block, width is 100% by default */
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+#details {
+    padding-top: 0;
+}
+
+/* any element that has a class attribute that anywhere
+ * within the name has "col-" will get selected here. */
+[class*="col-"] {
+  margin-left: 2%;
+}
+
+.first {
+  margin-left: 0%;
+}
 
 
+/* SECTIONS */
 
+header {
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  background: #fff;
+  z-index: 1;
+}
 
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* SOCIAL */
+
+#social {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 40px;
+  z-index: 1;
+}
+
+#social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
+}
